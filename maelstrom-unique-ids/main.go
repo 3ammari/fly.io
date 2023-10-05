@@ -18,7 +18,7 @@ func main() {
 		}
 
 		body["type"] = "generate_ok"
-		body["id"] = "ID-" + strconv.Itoa(rand.Int())
+		body["id"] = "ID-" + n.ID() + "-" + strconv.Itoa(rand.Int())
 
 		return n.Reply(msg, body)
 	})
